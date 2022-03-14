@@ -1,10 +1,11 @@
 const express = require('express')
-const port = 2030
+const port = process.env.PORT || 2030
 const app= express()
 const mongoose = require('mongoose')
+require('dotenv').config();
 const myRoute = require('./router/router')
 
-const url = 'mongodb://localhost/StudentDb'
+const url = 'mongodb+srv://upredictable_22:upredictable_22@cluster0.z1t9a.mongodb.net/schoolData'
 
 
 mongoose.connect(url).then(()=>{
