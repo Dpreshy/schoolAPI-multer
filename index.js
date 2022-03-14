@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 require('dotenv').config();
 const myRoute = require('./router/router')
 
-const url = 'mongodb+srv://upredictable_22:upredictable_22@cluster0.z1t9a.mongodb.net/schoolData'
+const url = process.env.CLOUDDB
 
 
 mongoose.connect(url).then(()=>{
